@@ -1,4 +1,5 @@
 
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -139,10 +140,12 @@ System.out.println("Enetr the number of elements:");
                     for(int i=0;i<ele;i++){
                        if(arr1[i]==index){
                            System.out.println("the number you asked for is found");
-                       }else{
-                           System.out.println("not found");
+                           break;
                        }
                     }
+                    System.out.println("not found");
+                    break;
+
                 }
                 case 4:
                 {
@@ -205,6 +208,14 @@ String pass;
         System.out.println("your score is: "+upper(pass));
         int sum=length(pass)+speci(pass)+upper(pass);
         System.out.println("the total score is: "+ sum);
+        if(sum>=8){
+            System.out.println("your password is strong");
+        } else if (sum>=6&&sum<=7) {
+            System.out.println("your password is Moderately Srong");
+        }else {
+            System.out.println("your password is weak");
+        }
+
 
 
 
